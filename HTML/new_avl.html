@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en-us">
+
+    <head>
+
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="generator" content="Silex v2.2.5">
+        <meta name="interface-id" content="new_avl">
+
+        <title>AVL Tree Tutor</title>
+        <meta name="description" content="">
+
+        <!-- The compiled CSS file -->
+        <link rel="stylesheet" href="./Assets/production.css">
+        <link data-silex-static="true" href="./Assets/normalize.css" rel="stylesheet">
+        <link data-silex-static="true" href="./Assets/front-end.css" rel="stylesheet">
+        <link data-silex-static="true" href="./Assets/CTAT.css" rel="stylesheet">
+        <link rel="stylesheet" href="Assets/avl-styles.css"></head>
+
+        <!--JS-->
+        <script data-silex-static="true" type="text/javascript" src="https://cdn.ctat.cs.cmu.edu/html-editor/js/jquery.js"></script>
+        <script data-silex-static="true" type="text/javascript" src="https://cdn.ctat.cs.cmu.edu/html-editor/js/jquery-ui.js"></script>
+        <script data-silex-static="true" type="text/javascript" src="https://cdn.ctat.cs.cmu.edu/releases/latest/ctatloader.js"></script>
+        <script data-silex-static="true" type="text/javascript" src="https://cdn.ctat.cs.cmu.edu/html-editor/js/ctat/ctat.min.js"></script>
+
+        <!-- favicon.ico. Place these in the root directory. -->
+        <link rel="shortcut icon" href="favicon.ico">
+
+        <style id="current-page-style">
+                .page-page-1{display:inherit; }
+        </style>
+
+    </head>
+
+    <body>
+
+
+    <!-- Header -->
+    <header class="align--center pt3">
+        <div class="container--lg border--bottom pb3">
+            <img class="logo mb3" src="./Assets/img/logo.jpg" alt="Logo" style="width:100px;height:100px; border-radius:50%">
+            <h2 class="mb3">An interactive AVL-Tree&nbsp;tutor.</h2>
+            <p>
+                Construct an AVL tree by inserting the following elements in the order of their occurrence.
+            </p>
+            
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Focus -->
+        <div class="container--lg pt1 pb1">
+
+            <div class="grid-row grid-row--center">
+                <div class="grid-column mt3 mb2 order-2">
+                    <div class="border--bottom pb2 mb2">
+                        <h2>How to?</h2><br><br>
+                        <p>
+                            <h3>AVL Tree Rotations</h3>
+                            In AVL tree, after performing operations like insertion and deletion we need to check the balance factor of every node in the tree. If every node satisfies the balance factor condition then we conclude the operation otherwise we must make it balanced. Whenever the tree becomes imbalanced due to any operation we use rotation operations to make the tree balanced.
+                            <br><br>Rotation operations are used to make the tree balanced. <i>(Rotation is the process of moving nodes either to left or to right to make the tree balanced.)</i>
+                            <br><br>There are four rotations and they are classified into two types.
+                            <center><img src="./Assets/img/AVL Rotations.png" style="width:50%"></center>
+
+                            <h4>Single Left Rotation (LL Rotation)</h4>
+                            In LL Rotation, every node moves one position to left from the current position. To understand LL Rotation, let us consider the following insertion operation in AVL Tree.
+                            <center><img src="./Assets/img/LL Rotation.png" style="width:50%"></center>
+
+                            <h4>Single Right Rotation (RR Rotation)</h4>
+                            In RR Rotation, every node moves one position to right from the current position. To understand RR Rotation, let us consider the following insertion operation in AVL Tree.
+                            <center><img src="./Assets/img/RR Rotation.png" style="width:50%"></center>
+
+                            <h4>Left Right Rotation (LR Rotation)</h4>
+                            The LR Rotation is a sequence of single left rotation followed by a single right rotation. In LR Rotation, at first, every node moves one position to the left and one position to right from the current position. To understand LR Rotation, let us consider the following insertion operation in AVL Tree.
+                            <center><img src="./Assets/img/LR Rotation.png" style="width:50%"></center>
+
+                            <h4>Right Left Rotation (RL Rotation)</h4>
+                            The RL Rotation is sequence of single right rotation followed by single left rotation. In RL Rotation, at first every node moves one position to right and one position to left from the current position. To understand RL Rotation, let us consider the following insertion operation in AVL Tree.
+                            <center><img src="./Assets/img/RL Rotation.png" style="width:50%"></center>
+
+                            <h3>AVL Tree Insertion</h3>
+                            In an AVL tree, the insertion operation is performed with O(log n) time complexity. In AVL Tree, a new node is always inserted as a leaf node. The insertion operation is performed as follows.
+                            <br><br>
+                            <ul>
+                                    <li>Insert the new element into the tree using Binary Search Tree insertion logic.
+                                    <li>After insertion, check the Balance Factor of every node.
+                                    <li>If the Balance Factor of every node is 0 or 1 or -1 then go for next operation.
+                                    <li>If the Balance Factor of any node is other than 0 or 1 or -1 then that tree is said to be imbalanced. In this case, perform suitable Rotation to make it balanced and go for next operation.
+                            </ul>
+                        </p>
+
+                    </div>
+                    <h2>Tutor</h2><br>
+                    <p class="bold">Steps&nbsp;:</p>
+                    <p class="italic text--gray mb1"><ul>
+                            <li>Insert the given element in the initial tree.
+                            <li>For each element, first select the rule you are going to apply, then balance the tree and click on next insertion.
+                            <li>When all elements are inserted, click on done.</ul><br>
+                    </p>
+                    <p class="bold">Numbers&nbsp;:<br></p>
+                    <p>
+                        <div data-silex-type="ctat" class="CTATTextInput editable-style page-page-1 paged-element CTATComponent" data-ctat-tabindex="1" data-silex-id="silex-id-1559110509085-19" id="ctatdiv77" data-ctat-component="CTATTextInput" data-ctat-enabled="true" style="width:250px; border:0px; border-radius:0px;background:none; padding-left:0px;margin-left:0px ;box-shadow: 0px"></div>
+                    </p>
+                    <br>
+                    
+                </div>
+            </div>
+
+        </div>
+
+        <div style="padding-top:0px; margin-top: 0%" data-silex-id="background-initial" class="background background-initial editable-style container-element prevent-draggable" data-silex-type="container">
+               
+                <div data-silex-type="ctat" class="CTATTextInput editable-style CTATComponent silex-id-1559040344080-2 page-page-1 paged-element" data-ctat-tabindex="1" data-silex-id="silex-id-1559040344080-2" id="ctatdiv21" data-ctat-component="CTATTextInput" data-ctat-enabled="true" data-ctat-disable-on-correct="false"></div>
+                <div data-silex-type="ctat" class="CTATTextInput editable-style CTATComponent silex-id-1559040414772-3 page-page-1 paged-element" data-ctat-tabindex="1" data-silex-id="silex-id-1559040414772-3" id="ctatdiv25" data-ctat-component="CTATTextInput" data-ctat-enabled="true" data-ctat-disable-on-correct="false"></div>
+                <div data-silex-type="ctat" class="CTATTextInput editable-style CTATComponent silex-id-1559040416871-4 page-page-1 paged-element" data-ctat-tabindex="1" data-silex-id="silex-id-1559040416871-4" id="ctatdiv29" data-ctat-component="CTATTextInput" data-ctat-enabled="true" data-ctat-show-hint-highlight="true" data-ctat-disable-on-correct="false"></div>
+                <div data-silex-type="ctat" class="CTATTextInput editable-style CTATComponent silex-id-1559040430839-5 page-page-1 paged-element" data-ctat-tabindex="1" data-silex-id="silex-id-1559040430839-5" id="ctatdiv33" data-ctat-component="CTATTextInput" data-ctat-enabled="true" data-ctat-disable-on-correct="false"></div>
+                <div data-silex-type="ctat" class="CTATTextInput editable-style CTATComponent silex-id-1559040433728-6 page-page-1 paged-element" data-ctat-tabindex="1" data-silex-id="silex-id-1559040433728-6" id="ctatdiv37" data-ctat-component="CTATTextInput" data-ctat-enabled="true" data-ctat-disable-on-correct="false"></div>
+        
+                <div data-silex-type="ctat" class="CTATTextInput editable-style CTATComponent silex-id-1559040446784-8 page-page-1 paged-element" data-ctat-tabindex="1" data-silex-id="silex-id-1559040446784-8" id="ctatdiv45" data-ctat-component="CTATTextInput" data-ctat-enabled="true" data-ctat-disable-on-correct="false"></div>
+                <div data-silex-type="ctat" class="CTATTextInput editable-style CTATComponent silex-id-1559040449877-9 page-page-1 paged-element" data-ctat-tabindex="1" data-silex-id="silex-id-1559040449877-9" id="ctatdiv49" data-ctat-component="CTATTextInput" data-ctat-enabled="true" data-ctat-disable-on-correct="false"></div>
+        
+        
+                <div data-silex-type="ctat" class="CTATTextInput editable-style CTATComponent silex-id-1559040440457-7 page-page-1 paged-element" data-ctat-tabindex="1" data-silex-id="silex-id-1559040440457-7" id="ctatdiv41" data-ctat-component="CTATTextInput" data-ctat-enabled="true" data-ctat-disable-on-correct="false"></div>
+                <div data-silex-type="ctat" class="CTATTextInput editable-style CTATComponent silex-id-1559107451853-35 page-page-1 paged-element" data-ctat-tabindex="1" data-silex-id="silex-id-1559107451853-35" id="ctatdiv52" data-ctat-component="CTATTextInput" data-ctat-enabled="true" data-ctat-disable-on-correct="false"></div>
+                <div data-silex-type="ctat" class="CTATTextInput editable-style CTATComponent silex-id-1559107460600-36 page-page-1 paged-element" data-ctat-tabindex="1" data-silex-id="silex-id-1559107460600-36" id="ctatdiv56" data-ctat-component="CTATTextInput" data-ctat-enabled="true" data-ctat-disable-on-correct="false"></div>
+                <div data-silex-type="ctat" class="CTATTextInput editable-style CTATComponent silex-id-1559107462726-37 page-page-1 paged-element" data-ctat-tabindex="1" data-silex-id="silex-id-1559107462726-37" id="ctatdiv60" data-ctat-component="CTATTextInput" data-ctat-enabled="true" data-ctat-disable-on-correct="false"></div>
+                <div data-silex-type="ctat" class="CTATTextInput editable-style CTATComponent silex-id-1559107654032-38 page-page-1 paged-element" data-ctat-tabindex="1" data-silex-id="silex-id-1559107654032-38" id="ctatdiv64" data-ctat-component="CTATTextInput" data-ctat-enabled="true" data-ctat-disable-on-correct="false"></div>
+                <div data-silex-type="ctat" class="CTATTextInput editable-style CTATComponent silex-id-1559107659568-39 page-page-1 paged-element" data-ctat-tabindex="1" data-silex-id="silex-id-1559107659568-39" id="ctatdiv68" data-ctat-component="CTATTextInput" data-ctat-enabled="true" data-ctat-disable-on-correct="false"></div>
+                <div data-silex-type="ctat" class="CTATTextInput editable-style CTATComponent silex-id-1559107663916-40 page-page-1 paged-element" data-ctat-tabindex="1" data-silex-id="silex-id-1559107663916-40" id="ctatdiv72" data-ctat-component="CTATTextInput" data-ctat-enabled="true" data-ctat-disable-on-correct="false"></div>
+                <div data-silex-type="ctat" class="CTATTextInput editable-style CTATComponent silex-id-1559107666515-41 page-page-1 paged-element" data-ctat-tabindex="1" data-silex-id="silex-id-1559107666515-41" id="ctatdiv76" data-ctat-component="CTATTextInput" data-ctat-enabled="true" data-ctat-disable-on-correct="false"></div>
+        
+        
+                <div data-silex-type="image" class="editable-style silex-id-1559108375089-60 image-element page-page-1 paged-element" data-silex-id="silex-id-1559108375089-60" id="2"><img class="silex-element-content" src="Assets/line-svg-1.png">
+                    <div class="silex-highlight-screen"></div>
+                </div>
+                <div data-silex-type="image" class="editable-style image-element silex-id-1559108398014-61 page-page-1 paged-element" data-silex-id="silex-id-1559108398014-61" id="6"><img class="silex-element-content" src="Assets/line-svg-1.png">
+                    <div class="silex-highlight-screen"></div>
+                </div>
+                <div data-silex-type="image" class="editable-style image-element silex-id-1559108451341-62 page-page-1 paged-element" data-silex-id="silex-id-1559108451341-62" id="4"><img class="silex-element-content" src="Assets/line-svg-1.png">
+                    <div class="silex-highlight-screen"></div>
+                </div>
+                <div data-silex-type="image" class="editable-style image-element silex-id-1559108458595-63 page-page-1 paged-element" data-silex-id="silex-id-1559108458595-63" id="14"><img class="silex-element-content" src="Assets/line-svg-1.png">
+                    <div class="silex-highlight-screen"></div>
+                </div>
+                <div data-silex-type="image" class="editable-style image-element silex-id-1559108608702-0 page-page-1 paged-element" data-silex-id="silex-id-1559108608702-0" id="12"><img class="silex-element-content" src="Assets/line-svg-1.png">
+                    <div class="silex-highlight-screen"></div>
+                </div>
+                <div data-silex-type="image" class="editable-style image-element silex-id-1559108634814-1 page-page-1 paged-element" data-silex-id="silex-id-1559108634814-1" id="10"><img class="silex-element-content" src="Assets/line-svg-1.png">
+                    <div class="silex-highlight-screen"></div>
+                </div>
+                <div data-silex-type="image" class="editable-style image-element silex-id-1559108647408-2 page-page-1 paged-element" data-silex-id="silex-id-1559108647408-2" id="8"><img class="silex-element-content" src="Assets/line-svg-1.png">
+                    <div class="silex-highlight-screen"></div>
+                </div>
+                <div data-silex-type="image" class="editable-style silex-id-1559108738056-3 image-element page-page-1 paged-element" data-silex-id="silex-id-1559108738056-3" id="1"><img class="silex-element-content" src="Assets/line-svg.png">
+                    <div class="silex-highlight-screen"></div>
+                </div>
+                <div data-silex-type="image" class="editable-style image-element silex-id-1559108774278-4 page-page-1 paged-element" data-silex-id="silex-id-1559108774278-4" id="5"><img class="silex-element-content" src="Assets/line-svg.png">
+                    <div class="silex-highlight-screen"></div>
+                </div>
+                <div data-silex-type="image" class="editable-style image-element silex-id-1559108798044-5 page-page-1 paged-element" data-silex-id="silex-id-1559108798044-5" id="3"><img class="silex-element-content" src="Assets/line-svg.png">
+                    <div class="silex-highlight-screen"></div>
+                </div>
+                <div data-silex-type="image" class="editable-style image-element silex-id-1559108812716-6 page-page-1 paged-element" data-silex-id="silex-id-1559108812716-6" id="13"><img class="silex-element-content" src="Assets/line-svg.png">
+                    <div class="silex-highlight-screen"></div>
+                </div>
+                <div data-silex-type="image" class="editable-style image-element silex-id-1559108850610-7 page-page-1 paged-element" data-silex-id="silex-id-1559108850610-7" id="11"><img class="silex-element-content" src="Assets/line-svg.png">
+                    <div class="silex-highlight-screen"></div>
+                </div>
+                <div data-silex-type="image" class="editable-style image-element silex-id-1559108862136-8 page-page-1 paged-element" data-silex-id="silex-id-1559108862136-8" id="9"><img class="silex-element-content" src="Assets/line-svg.png">
+                    <div class="silex-highlight-screen"></div>
+                </div>
+                <div data-silex-type="image" class="editable-style image-element silex-id-1559108875075-9 page-page-1 paged-element" data-silex-id="silex-id-1559108875075-9" id="7"><img class="silex-element-content" src="Assets/line-svg.png">
+                    <div class="silex-highlight-screen"></div>
+                </div>
+                <div class="CTATGroupingComponent silex-id-1559109361026-11 group-element page-page-1 paged-element CTATComponent" data-ctat-componentlist="ctatdiv21,ctatdiv25,ctatdiv33,ctatdiv45,ctatdiv76,ctatdiv72,ctatdiv68,ctatdiv64,ctatdiv29,ctatdiv37,ctatdiv41,ctatdiv60,ctatdiv56,ctatdiv52,ctatdiv49,1,2,3,4,5,6,7,8,9,10,11,12,13,14" id="tree" data-silex-id="silex-id-1559109361026-11" data-ctat-component="CTATGroupingComponent" data-ctat-enabled="true"></div>
+        
+                <div data-silex-type="ctat" class="CTATButton editable-style silex-id-1559109837133-15 page-page-1 paged-element CTATComponent" data-ctat-tabindex="1" data-silex-id="silex-id-1559109837133-15" id="ctatdiv97" data-ctat-component="CTATButton" data-ctat-enabled="true" data-ctat-label="Next Insertion" data-ctat-tutor="true" data-ctat-disable-on-correct="false"></div>
+        
+                <div data-silex-type="ctat" style="width:400px; height:180px;" class="CTATHintWidget undefined editable-style silex-id-1559107945584-57 page-page-1 paged-element" data-ctat-tabindex="1" data-silex-id="silex-id-1559107945584-57" data-ctat-hint-enabled="true">
+                    <table style="width: 100%; height: 100%;">
+                        <tbody>
+                            <tr height="125">
+                                <td>
+                                    <div style="padding:10px" class="CTATHintWindow CTATComponent" id="ctatdiv89" data-ctat-component="CTATHintWindow" onkeypress="return noenter(event)" data-ctat-enabled="true"></div>
+                                </td>
+                                <td width="64" style="padding-top: 0px; padding-bottom: 0px;">
+                                    <div id="hint" style="margin-bottom: 10px" class="CTATHintButton CTATComponent" data-ctat-component="CTATHintButton" data-ctat-enabled="true"></div>
+                                    <div id="done" class="CTATDoneButton CTATComponent" data-ctat-component="CTATDoneButton" data-ctat-enabled="true"></div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        <!-- CTA -->
+        <div class="bg--dark-gray align--center pt3 pb3">
+            <div class="container">
+                <p class="text--white mb3">We are open to suggestions and queries.</p>
+                <a href="mailto:arpit.jain@iiitdmj.ac.in"><button class="btn btn--secondary">Message us</button></a>
+            </div>
+        </div>
+
+    </main>
+
+    </body>
+</html>
+
+
+
+    
