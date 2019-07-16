@@ -1,0 +1,2 @@
+# AVLTree
+This project describes our new visual understanding based intelligent-state-feedback approach, for teaching the insertion algorithm for the AVL trees. Our aim is to supplement basic class lectures with an interactive intelligent tutoring system that integrates our proposed approach for better understanding. A more extensive explanation of the developed tutor is available here in the demo video link - https://youtu.be/8YIk7LpQTKI
